@@ -1,26 +1,74 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+
+  <div id="header">
+    <Navigation/>
+  </div>
+
+  <!-- Content -->
+  <router-view v-slot="{ Component }" class="mt-5 main-content">
+    <transition name="fade" mode="out-in">
+      <component :is="Component" />
+    </transition>
+  </router-view>
+
+  <a id="scroll-top"></a>
+
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// @ is an alias to /src
+import Navigation from '@/components/NavigationComponent.vue';
+
+import $ from "jquery";
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Navigation
+  },
+  mounted () {
+    this.initScrollToTop()
+  },
+  methods: {
+    initScrollToTop: function() {
+      var scrollBtn = $('#scroll-top');
+
+      $(window).scroll(function() {
+        if ($(window).scrollTop() > 300) {
+          scrollBtn.addClass('show');
+        } else {
+          scrollBtn.removeClass('show');
+        }
+      });
+
+      scrollBtn.on('click', function(e) {
+        e.preventDefault();
+        $('html, body').animate({scrollTop:0}, '300');
+      });
+    }
   }
 }
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  color: rgba(0,0,0,.75);
+  margin: 0 1em;
+  height: 100vh;
+  animation: fade-in 1s ease;
+}
+
+/* Vue router transitions */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>
