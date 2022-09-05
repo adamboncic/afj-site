@@ -1,9 +1,9 @@
 <template>
   <div class="home">
     <div id="content">
-      <h1 class="mb-3 slide-up">
-        <div class="home-link">
-        <router-link class="main-title" to="/"><span>Annika</span><span>Chavez</span></router-link>
+      <h1 class="slide-up">
+        <div class="home-header">
+          <div class="main-title"><span>Annika</span><span>Chavez</span></div>
         </div>
       </h1>
     </div>

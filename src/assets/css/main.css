@@ -21,63 +21,25 @@ body {
   color: #000;
   text-transform: uppercase;
 }
-#photoGallery { /* Masonry container */
-    -webkit-column-count: 3;
-  -moz-column-count:3;
-  column-count: 3;
-  -webkit-column-gap: 1em;
-  -moz-column-gap: 1em;
-  column-gap: 1em;
-   margin: 1.5em;
-    padding: 0;
-
-    /*-moz-column-gap: 1.5em;
-    -webkit-column-gap: 1.5em;
-    column-gap: 1.5em;*/
-    font-size: .85em;
-/*    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: repeat(3, minmax(250px,1fr));*/
-}
-.item {
-/*    display: inline-block;
-    margin: 0 0 1.5em;
-    width: 100%;
-  -webkit-transition:1s ease all;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;*/
-}
-.item img{max-width:100%; margin: 5px 0;}
-
-@media only screen and (max-width: 320px) {
-/*    #photoGallery {
-        grid-template-columns: minmax(250px,1fr);
-    }*/
-}
-
-@media only screen and (min-width: 321px) and (max-width: 768px){
-    #photoGallery {
-        -moz-column-count: 2;
-        -webkit-column-count: 2;
-        column-count: 2;
-    }
-}
-/*@media only screen and (min-width: 769px) {
-    #photoGallery {
-        -moz-column-count: 3;
-        -webkit-column-count: 3;
-        column-count: 3;
-    }
-}*/
 
 [v-cloak] {
   display: none;
 }
 
+/* Vue router transitions */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
 .main-content {
   margin: 0 20%;
-  padding-bottom: 3em;
+  padding: 3em 0;
 }
 
 .main-title {
@@ -91,9 +53,14 @@ body {
     display: flex;
     flex-direction: column;
     line-height: 1;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
-.home-link {
-      margin-top: 4em;
+.home-header {
+    margin-top: 4em;
 }
 a.main-title:hover {
   text-decoration: none;
@@ -320,13 +287,33 @@ a.main-title:hover {
   display: inline-block;
 }
 
-.about .page-title:before {
+.about .page-title:before,
+.directing-template .page-title:before {
     content: "";
     background: #ffffff85;
     width: 30%;
     height: 2px;
     position: absolute;
     bottom: -10px;
+}
+.film-details {
+    text-transform: none;
+    padding: 1.25em 0;
+    font-weight: 100;
+}
+.film-poster {
+    padding: 1rem;
+}
+.festivals {
+    line-height: 1.75;
+    padding-top: 1em;
+}
+.stills-gallery {
+    margin-top: 3em;
+}
+
+.still-block {
+    padding: 5px;
 }
 
 .about-img {
@@ -387,16 +374,27 @@ a.main-title:hover {
   text-align: left;
 }
 
+.directing-template {
+    text-align: left;
+}
+
+.film-header{
+    font-weight: 100;
+    letter-spacing: 1px;
+    padding-bottom: 1em;
+}
+
 .film-wrapper {
   padding-bottom: 1em;
 }
 .film-title {
-  position: relative;
+    position: relative;
     display: inline-block;
     font-weight: 500;
     letter-spacing: .5px;
-
     line-height: 2;
+    color: inherit !important;
+    text-decoration: none !important;
 }
 
 .film-wrapper:hover > .film-title::before{
@@ -409,10 +407,6 @@ a.main-title:hover {
 }
 
 .film-preview {
-    /*display: none;*/
-/*    position: absolute;
-    top: 0;
-    left: 60%;*/
     z-index: -1;
     opacity: 0.0;
     -webkit-transition: all 500ms ease-in-out;
@@ -424,11 +418,45 @@ a.main-title:hover {
 
 .directing {
     position: relative;
-  }
-  .film-preview img {
+}
+.film-preview img {
     width: 100%;
     height: 100%;
-  }
+}
+#photo-gallery {
+    -webkit-column-count: 3;
+    -moz-column-count:3;
+    column-count: 3;
+    margin: 1.5em;
+    padding: 0;
+    font-size: .85em;
+}
+
+.photo-gallery-item img{
+    max-width:100%;
+    margin: 5px 0;
+}
+
+@media only screen and (min-width: 321px) and (max-width: 768px){
+    #photo-gallery {
+        -moz-column-count: 2;
+        -webkit-column-count: 2;
+        column-count: 2;
+    }
+    .photography.main-content {
+        margin: 0 auto;
+    }
+}
+@media only screen and (min-width: 769px) {
+    #photo-gallery {
+        -moz-column-count: 3;
+        -webkit-column-count: 3;
+        column-count: 3;
+    }
+    .photography.main-content {
+        margin: 0 15%;
+    }
+}
 
 /*** Animations ***/
 .slide-up {
@@ -501,7 +529,7 @@ a.main-title:hover {
   .contact-grid {
     margin: 0 auto;
   }
-  .home-link {
+  .home-header {
     margin-top: 3em;
   }
   .main-title {

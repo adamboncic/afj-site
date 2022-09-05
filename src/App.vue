@@ -5,7 +5,7 @@
   </div>
 
   <!-- Content -->
-  <router-view v-slot="{ Component }" class="mt-5 main-content">
+  <router-view v-slot="{ Component }" class="main-content">
     <transition name="fade" mode="out-in">
       <component :is="Component" />
     </transition>
@@ -59,16 +59,5 @@ export default {
   margin: 0 1em;
   height: 100vh;
   animation: fade-in 1s ease;
-}
-
-/* Vue router transitions */
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.5s ease;
-}
-
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
 }
 </style>

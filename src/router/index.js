@@ -28,6 +28,16 @@ const routes = [
     component: () => import('../views/DirectingView.vue')
   },
   {
+    path: '/directing/bolognese',
+    name: 'Bolognese',
+    component: () => import('../views/BologneseView.vue')
+  },
+  {
+    path: '/directing/helium',
+    name: 'Helium',
+    component: () => import('../views/HeliumView.vue')
+  },
+  {
     path: '/photography',
     name: 'Photography',
     component: () => import('../views/PhotographyView.vue')

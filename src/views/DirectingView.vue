@@ -1,14 +1,18 @@
 <template>
   <div class="directing">
     <div class="row">
-      <div class="col-sm-4">
+      <div class="col-sm-5">
         <div class="film-titles">
           <div class="film-wrapper">
-            <a class="film-title" data-id="bolognese">Bolognese (2021)</a>
+            <router-link class="film-title" data-id="bolognese" to="/directing/bolognese">
+              Bolognese (2021)
+            </router-link>
           </div>
 
           <div class="film-wrapper">
-            <a class="film-title" data-id="helium ">Helium (2022)</a>
+            <router-link class="film-title" data-id="helium" to="/directing/helium">
+              Helium (2022)
+            </router-link>
           </div>
 
           <div class="film-wrapper">
@@ -16,9 +20,9 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-8">
+      <div class="col-sm-7">
         <div class="film-preview">
-          <img border="0" class="img-fluid" src="//freight.cargo.site/w/739/q/94/i/3a9a87a0b2a3c2ec8eed692af8df3aabe4cbdc84d30834a67383f3542ca821bb/BOLOGNESE.mp4-high.gif" >
+          <img border="0" class="img-fluid" v-bind:src="filmPreviewUrl">
         </div>
       </div>
     </div>
@@ -34,7 +38,8 @@
     name: 'DirectingView',
     data() {
       return {
-        data: json
+        json: json.directing,
+        filmPreviewUrl: ''
       }
     },
     mounted () {
@@ -42,12 +47,20 @@
     },
     methods: {
       toggleFilmPreview: function() {
+        var self = this
         $(".film-title").hover(function () {
+            var id = $(this).data('id')
+            var filmObj = self.json.find((e) => e.id === id)
+            if (filmObj) self.filmPreviewUrl = self.getSrc(filmObj.src)
+
             $(".film-preview").css('opacity','1');
           }, function () {
             $(".film-preview").css('opacity','0');
           }
         )
+      },
+      getSrc: function (file) {
+        return require('@/assets/images/directing/gifs/'+file);
       }
     }
   }

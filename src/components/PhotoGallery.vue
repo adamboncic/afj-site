@@ -1,19 +1,23 @@
 <template>
-  <div :id="galleryID">
+  
+  <div :id="id">
+
     <a
       v-for="(image, key) in imagesData"
       :key="key"
-      :href="image.url"
-      :data-pswp-width="image.width"
-      :data-pswp-height="image.height"
+      :href="image.src"
+      :data-pswp-width="[image.type == 'landscape' ? '772' : '512']"
+      :data-pswp-height="[image.type == 'landscape' ? '512' : '772']"
       target="_blank"
       rel="noreferrer"
-      class="item fade-in"
+      class="photo-gallery-item"
+      :class="[image.type == 'landscape' ? 'horizontal' : 'vertical']"
+      data-aos="fade-up"
+      data-aos-offset="-300"
+      data-aos-duration="1000"
+      data-aos-anchor-placement="bottom-bottom"
     >
-    <transition name="fade">
-      <img :src="image.url" alt="" />
-    </transition>
-
+      <img class="img-fluid" :src="image.src" alt="" />
     </a>
   </div>
 </template>
@@ -21,15 +25,23 @@
 <script>
 import PhotoSwipeLightbox from 'photoswipe/lightbox';
 import 'photoswipe/style.css';
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+import $ from "jquery";
 
 export default {
   name: 'PhotoGallery',
   props: {
-    galleryID: String,
+    id: String,
     images: Array,
   },
   components: {
 
+  },
+  data() {
+    return {
+      blob: "'https://images.unsplash.com/photo-1439209306665-700c9bca794c?dpr=1&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=)'"
+    }
   },
   setup(props) {
     return {
@@ -39,11 +51,15 @@ export default {
   mounted() {
     if (!this.lightbox) {
       this.lightbox = new PhotoSwipeLightbox({
-        gallery: '#' + this.$props.galleryID,
+        gallery: '#' + this.$props.id,
         children: 'a',
         pswpModule: () => import('photoswipe'),
       });
-      this.lightbox.init();
+      this.lightbox.init();    
+      AOS.init()
+     $(window).bind("load", function() {
+        AOS.init()
+      })
     }
   },
   unmounted() {
@@ -52,31 +68,15 @@ export default {
       this.lightbox = null;
     }
   },
-  methods: {},
+  methods: {
+
+  },
+  created() {
+    console.log('blob', this.blob)
+  }
 };
 </script>
 
 <style scoped>
-    .animated-component.fade-enter-from,
-    .animated-component.zoom-enter-from {
-      transition: none;
-    }
-    /* Fade animation */
-    .fade-enter-active,
-    .fade-leave-active {
-      transition: opacity 300ms ease;
-    }
-    .fade-enter-from,
-    .fade-leave-to {
-      opacity: 0;
-    }
-    /* Zoom animation */
-    .zoom-enter-active,
-    .zoom-leave-active {
-      transition: transform 300ms ease;
-    }
-    .zoom-enter-from,
-    .zoom-leave-to {
-      transform: scale(0.9);
-    }
+
 </style>
