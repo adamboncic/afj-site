@@ -24,7 +24,7 @@
       </div>
       <div class="col-sm-7">
         <div class="film-preview">
-          <img border="0" class="img-fluid" v-bind:src="filmPreviewUrl">
+          <img border="0" class="img-fluid" v-bind:src="filmPreviewUrl" rel="preload">
         </div>
       </div>
     </div>

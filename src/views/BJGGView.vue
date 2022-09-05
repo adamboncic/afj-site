@@ -8,7 +8,7 @@
 
         <!-- Banner -->
         <div class="film-banner">
-          <img class="img-fluid" :src="getSrc('bed.jpg')">
+          <img class="img-fluid" :src="getSrc('bed.jpg')" rel="preload">
         </div>
 
         <!-- Details -->
@@ -23,10 +23,10 @@
     <!-- Gallery -->
     <div class="stills-gallery mt-0">
       <div class="row">
-        <img class="still-block img-fluid col-sm-6" :src="getSrc('mirror.jpg')">
-        <img class="still-block img-fluid col-sm-6" :src="getSrc('stare.jpg')">
-        <img class="still-block img-fluid col-sm-6" :src="getSrc('candle.jpg')">
-        <img class="still-block img-fluid col-sm-6" :src="getSrc('room.jpg')">
+        <img class="still-block img-fluid col-sm-6" :src="getSrc('mirror.jpg')" rel="preload">
+        <img class="still-block img-fluid col-sm-6" :src="getSrc('stare.jpg')" rel="preload">
+        <img class="still-block img-fluid col-sm-6" :src="getSrc('candle.jpg')" rel="preload">
+        <img class="still-block img-fluid col-sm-6" :src="getSrc('room.jpg')" rel="preload">
       </div>
     </div>
   </div>
