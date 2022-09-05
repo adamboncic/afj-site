@@ -8,24 +8,12 @@
     {
       "id": "helium",
       "title": "Helium",
-      "header": "Helium (2022)",
-      "src": "helium.gif",
-      "banner": "banner.png",
-      "bathroom": "bathroom.jpg",
-      "still_sophie": "still_sophie.jpg",
-      "still_tyerion": "still_tyerion.jpg",
-      "bts_gigi": "bts_gigi.jpg",
-      "bts_sophie": "bts_sophie.jpg",
-      "bts_tyerion": "bts_tyerion.jpg",
-      "bts_s_t": "bts_s_t.jpg",
-      "bts_taub_anni": "bts_taub_anni.jpg"
+      "src": "helium.gif"
     },
     {
-      "id": "bad_jew_good_girl",
+      "id": "bjgg",
       "title": "Bad Jew Good Girl",
-      "src" : "bjgg.gif",
-      "poster": "",
-      "trailer": ""
+      "src" : "bjgg.gif"
     }
   ]
 }

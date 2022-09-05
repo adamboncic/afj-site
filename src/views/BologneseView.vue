@@ -45,22 +45,12 @@
 </template>
 
 <script>
-import json from '../static/data.json';
 
 export default {
   name: 'BologneseView',
-  data() {
-    return {
-      data: [],
-      film: 'bolognese'
-    }
-  },
-  mounted() {
-    this.data = json.directing.find((e) => e.id === this.film)
-  },
   methods: {
     getSrc: function (file) {
-      return require(`@/assets/images/directing/${this.film}/${file}`);
+      return require(`@/assets/images/directing/bolognese/${file}`);
     }
   }
 };

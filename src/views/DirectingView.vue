@@ -16,7 +16,9 @@
           </div>
 
           <div class="film-wrapper">
-            <a class="film-title" data-id="bad_jew_good_girl">Bad Jew Good Girl (2022)</a>
+            <router-link class="film-title" data-id="bjgg" to="/directing/bjgg">
+              Bad Jew Good Girl (2022)
+            </router-link>
           </div>
         </div>
       </div>

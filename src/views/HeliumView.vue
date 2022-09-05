@@ -7,7 +7,7 @@
         <h5 class="film-header">Helium (2021)</h5>
 
         <!-- Banner -->
-        <div class="film-banner" v-if="data.banner">
+        <div class="film-banner">
           <img class="img-fluid" :src="getSrc('banner.png')">
         </div>
 
@@ -39,30 +39,13 @@
 </template>
 
 <script>
-import json from '../static/data.json';
 
 export default {
   name: 'HeliumView',
-  data() {
-    return {
-      data: [],
-      film: 'helium'
-    }
-  },
-  mounted() {
-    this.data = json.directing.find((e) => e.id === this.film)
-  },
   methods: {
     getSrc: function (file) {
-      return require(`@/assets/images/directing/${this.film}/${file}`);
+      return require(`@/assets/images/directing/helium/${file}`);
     }
   }
 };
 </script>
-<style scoped>
-/*  .stills-gallery > img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }*/
-</style>

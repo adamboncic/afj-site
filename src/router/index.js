@@ -38,6 +38,11 @@ const routes = [
     component: () => import('../views/HeliumView.vue')
   },
   {
+    path: '/directing/bjgg',
+    name: 'BJGG',
+    component: () => import('../views/BJGGView.vue')
+  },
+  {
     path: '/photography',
     name: 'Photography',
     component: () => import('../views/PhotographyView.vue')
