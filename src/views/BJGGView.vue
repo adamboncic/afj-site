@@ -27,9 +27,6 @@
         <img class="still-block img-fluid col-sm-6" :src="getSrc('stare.jpg')">
         <img class="still-block img-fluid col-sm-6" :src="getSrc('candle.jpg')">
         <img class="still-block img-fluid col-sm-6" :src="getSrc('room.jpg')">
-
-        <img class="still-block img-fluid col-sm-6" :src="getSrc('bts_2.jpg')">
-        <img class="still-block img-fluid col-sm-6 fit" :src="getSrc('bts_3.jpg')">
       </div>
     </div>
   </div>
