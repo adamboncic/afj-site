@@ -33,7 +33,7 @@
 </template>
 
 <script>
-  import $ from "jquery";
+  //import $ from "jquery";
   import json from '../static/data.json'
 
   export default {
@@ -49,17 +49,17 @@
     },
     methods: {
       toggleFilmPreview: function() {
-        var self = this
-        $(".film-wrapper").hover(function () {
-            var id = $(this).data('id')
-            var filmObj = self.json.find((e) => e.id === id)
-            if (filmObj) self.filmPreviewUrl = self.getSrc(filmObj.src)
+        // var self = this
+        // $(".film-wrapper").hover(function () {
+        //     var id = $(this).data('id')
+        //     var filmObj = self.json.find((e) => e.id === id)
+        //     if (filmObj) self.filmPreviewUrl = self.getSrc(filmObj.src)
 
-            $(".film-preview").css('opacity','1');
-          }, function () {
-            $(".film-preview").css('opacity','0');
-          }
-        )
+        //     $(".film-preview").css('opacity','1');
+        //   }, function () {
+        //     $(".film-preview").css('opacity','0');
+        //   }
+        // )
       },
       getSrc: function (file) {
         return require('@/assets/images/directing/gifs/'+file);

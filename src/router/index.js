@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import { loadImage } from './LoadImage.js'
+//import { loadImage } from './LoadImage.js'
 
 const routes = [
   {
@@ -13,7 +13,7 @@ const routes = [
     name: 'About',
     component: () => import('../views/AboutView.vue'),
     beforeEnter() {
-      loadImage('About');
+      //loadImage('About');
     }
   },
   {
@@ -31,7 +31,7 @@ const routes = [
     name: 'Directing',
     component: () => import('../views/DirectingView.vue'),
     beforeEnter() {
-      loadImage('Directing');
+      //loadImage('Directing');
     }
   },
   {
@@ -39,7 +39,7 @@ const routes = [
     name: 'Bolognese',
     component: () => import('../views/BologneseView.vue'),
     beforeEnter() {
-      loadImage('Bolognese');
+      //loadImage('Bolognese');
     }
   },
   {
@@ -47,7 +47,7 @@ const routes = [
     name: 'Helium',
     component: () => import('../views/HeliumView.vue'),
     beforeEnter() {
-      loadImage('Helium');
+      //loadImage('Helium');
     }
   },
   {
@@ -55,7 +55,7 @@ const routes = [
     name: 'BadJewGoodGirl',
     component: () => import('../views/BadJewGoodGirlView.vue'),
     beforeEnter() {
-      loadImage('BadJewGoodGirl');
+      //loadImage('BadJewGoodGirl');
     }
   },
   {
