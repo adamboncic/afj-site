@@ -27,18 +27,18 @@
 
     <div class="right-col col-sm-5">
       <!-- Poster -->
-      <img class="img-fluid film-poster" :src="getSrc('bolognese_poster.jpeg')" rel="preload">
+      <img class="img-fluid film-poster" :src="getSrc('bolognese_poster.jpeg')">
     </div>
   </div>
 
   <!-- Gallery -->
   <div class="stills-gallery col-sm-12">
       <div class="row">
-        <img class="still-block img-fluid col-sm-6" :src="getSrc('still_1.jpeg')" rel="preload">
-        <img class="still-block img-fluid col-sm-6" :src="getSrc('still_2.jpeg')" rel="preload">
-        <img class="still-block img-fluid col-sm-12" :src="getSrc('festival.jpg')" rel="preload">
-        <img class="still-block img-fluid col-sm-6" :src="getSrc('still_3.jpeg')" rel="preload">
-        <img class="still-block img-fluid col-sm-6" :src="getSrc('still_4.jpeg')" rel="preload">
+        <img class="still-block img-fluid col-sm-6" :src="getSrc('still_1.jpeg')">
+        <img class="still-block img-fluid col-sm-6" :src="getSrc('still_2.jpeg')">
+        <img class="still-block img-fluid col-sm-12" :src="getSrc('festival.jpg')">
+        <img class="still-block img-fluid col-sm-6" :src="getSrc('still_3.jpeg')">
+        <img class="still-block img-fluid col-sm-6" :src="getSrc('still_4.jpeg')">
       </div>
   </div>
 </div>

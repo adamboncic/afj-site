@@ -8,7 +8,7 @@
           </p>
         </div>
         <div class="about-img col-sm-6 order-1 order-md-12 shift-in">
-            <img class="img-fluid" :src="require('@/assets/images/about.jpg')" alt="About Image" rel="preload">
+            <img class="img-fluid" :src="require('@/assets/images/about/about.jpg')" alt="About Image">
         </div>
     </div>
   </div>

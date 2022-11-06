@@ -8,7 +8,7 @@
 
         <!-- Banner -->
         <div class="film-banner">
-          <img class="img-fluid" :src="getSrc('banner.png')" rel="preload">
+          <img class="img-fluid" :src="getSrc('banner.png')">
         </div>
 
         <!-- Details -->
@@ -21,18 +21,18 @@
     <!-- Gallery -->
     <div class="stills-gallery m-0">
       <div class="row mb-4">
-          <img class="still-block img-fluid col-sm-8" :src="getSrc('bathroom.jpg')" rel="preload">
+          <img class="still-block img-fluid col-sm-8" :src="getSrc('bathroom.jpg')">
           <div class="col-sm-4">
             <div class="row">
-            <img class="still-block img-fluid" :src="getSrc('still_sophie.jpg')" rel="preload">
-            <img class="still-block img-fluid" :src="getSrc('still_tyerion.jpg')" rel="preload">
+            <img class="still-block img-fluid" :src="getSrc('still_sophie.jpg')">
+            <img class="still-block img-fluid" :src="getSrc('still_tyerion.jpg')">
           </div>
           </div>
       </div>
       <div class="row">
-        <img class="still-block img-fluid col-sm-3" :src="getSrc('bts_gigi.jpg')" rel="preload">
-        <img class="still-block img-fluid col-sm-6" :src="getSrc('bts_s_t.jpg')" rel="preload">
-        <img class="still-block img-fluid col-sm-3" :src="getSrc('bts_tyerion.jpg')" rel="preload">
+        <img class="still-block img-fluid col-sm-3" :src="getSrc('bts_gigi.jpg')">
+        <img class="still-block img-fluid col-sm-6" :src="getSrc('bts_s_t.jpg')">
+        <img class="still-block img-fluid col-sm-3" :src="getSrc('bts_tyerion.jpg')">
       </div>
     </div>
   </div>

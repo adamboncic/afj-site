@@ -1,7 +1,8 @@
 <template>
   <div class="photography">
     <div class="">
-      <PhotoGallery id="photo-gallery" :images="images" />
+      <h5>Coming Soon...</h5>
+      <!-- <PhotoGallery id="photo-gallery" :images="images" /> -->
     </div>
   </div>
 </template>
@@ -9,13 +10,13 @@
 <script>
 
   // import $ from "jquery";
-  import PhotoGallery from '@/components/PhotoGallery.vue';
+  //import PhotoGallery from '@/components/PhotoGallery.vue';
   import json from '@/static/data.json'
 
   export default {
     name: 'PhotographyView',
     components: {
-      PhotoGallery
+      //PhotoGallery
     },
 
     data() {
