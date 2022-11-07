@@ -1,6 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-//import { loadImage } from './LoadImage.js'
 
 const routes = [
   {
@@ -11,10 +10,7 @@ const routes = [
   {
     path: '/about',
     name: 'About',
-    component: () => import('../views/AboutView.vue'),
-    beforeEnter() {
-      //loadImage('About');
-    }
+    component: () => import('../views/AboutView.vue')
   },
   {
     path: '/acting',
@@ -29,34 +25,22 @@ const routes = [
   {
     path: '/directing',
     name: 'Directing',
-    component: () => import('../views/DirectingView.vue'),
-    beforeEnter() {
-      //loadImage('Directing');
-    }
+    component: () => import('../views/DirectingView.vue')
   },
   {
     path: '/directing/bolognese',
     name: 'Bolognese',
-    component: () => import('../views/BologneseView.vue'),
-    beforeEnter() {
-      //loadImage('Bolognese');
-    }
+    component: () => import('../views/BologneseView.vue')
   },
   {
     path: '/directing/helium',
     name: 'Helium',
-    component: () => import('../views/HeliumView.vue'),
-    beforeEnter() {
-      //loadImage('Helium');
-    }
+    component: () => import('../views/HeliumView.vue')
   },
   {
     path: '/directing/bjgg',
     name: 'BadJewGoodGirl',
-    component: () => import('../views/BadJewGoodGirlView.vue'),
-    beforeEnter() {
-      //loadImage('BadJewGoodGirl');
-    }
+    component: () => import('../views/BadJewGoodGirlView.vue')
   },
   {
     path: '/photography',

@@ -2,7 +2,6 @@
 <style>
   .spinner {
     margin: 20px auto;
-    width: 500px;
     height: 450px;
     display: flex;
     justify-content: center;
