@@ -26,7 +26,7 @@
 
       <!-- Gallery -->
       <div class="stills-gallery mt-0">
-        <div class="row">
+        <div>
           <img class="still-block img-fluid col-sm-6" :src="getSrc('mirror.jpg')">
           <img class="still-block img-fluid col-sm-6" :src="getSrc('stare.jpg')">
           <img class="still-block img-fluid col-sm-6" :src="getSrc('candle.jpg')">

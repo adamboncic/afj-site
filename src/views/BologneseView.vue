@@ -35,8 +35,8 @@
     </div>
 
     <!-- Gallery -->
-    <div class="stills-gallery col-sm-12">
-        <div class="row">
+    <div class="stills-gallery">
+        <div>
           <img class="still-block img-fluid col-sm-6" :src="getSrc('still_1.jpeg')">
           <img class="still-block img-fluid col-sm-6" :src="getSrc('still_2.jpeg')">
           <img class="still-block img-fluid col-sm-12" :src="getSrc('festival.jpg')">
