@@ -22,8 +22,6 @@ body {
   text-transform: uppercase;
 }
 
-.row:before, .row:after {display: none !important;}
-
 [v-cloak] {
   display: none;
 }
