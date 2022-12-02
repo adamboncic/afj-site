@@ -1,8 +1,8 @@
 <template>
   <div class="directing-template helium">
-    <preload-image :imgUrlArr="imgUrls" @imgAllLoaded="loadedState"></preload-image>
+    <!-- <preload-image :imgUrlArr="imgUrls" @imgAllLoaded="loadedState"></preload-image> -->
 
-    <div v-if="preLoaded">
+    <div v-if="true">
       <!-- Back to Page -->
       <div class="back-to-page">
         <router-link class="back-button" to="/directing">
@@ -50,12 +50,12 @@
 
 <script>
 
-import PreloadImage from '@/components/PreloadImageComponent.vue';
+//import PreloadImage from '@/components/PreloadImageComponent.vue';
 
 export default {
   name: 'HeliumView',
   components: {
-    PreloadImage
+    //PreloadImage
   },
   data() {
     return {
