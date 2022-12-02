@@ -40,6 +40,24 @@ body {
 .main-content {
   margin: 0 20%;
   padding: 3em 0;
+  position: relative;
+}
+
+.back-to-page {
+    position: absolute;
+    top: 0;
+    font-size: small;
+    transition: all .2s ease-in-out;
+}
+
+.back-to-page:hover {
+    transform: scale(1.05);
+}
+
+.back-button {
+    color: rgb(0 0 0) !important;
+    letter-spacing: .5px;
+    text-decoration: none !important;
 }
 
 .main-title {
@@ -387,6 +405,22 @@ a.main-title:hover {
 .film-wrapper {
   padding-bottom: 1.5em;
 }
+
+.directing-reel {
+    text-align: center;
+    margin-bottom: 3em;
+}
+
+.directing-reel video {
+    width: 90%;
+    height: auto;
+}
+
+.film-titles {
+    display: flex;
+    justify-content: space-between;
+}
+
 .film-title {
     position: relative;
     display: inline-block;
@@ -438,6 +472,12 @@ a.main-title:hover {
 }
 
 @media only screen and (min-width: 321px) and (max-width: 768px){
+    .directing-reel video {
+        width: 100%;
+    }
+    .film-titles {
+        flex-direction: column;
+    }
     #photo-gallery {
         -moz-column-count: 2;
         -webkit-column-count: 2;

@@ -1,7 +1,16 @@
 <template>
   <div class="directing">
     <div class="row">
-      <div class="col-sm-5">
+      <div class="col-sm-12">
+        <!-- Trailer -->
+        <div class="directing-reel">
+          <video controls muted autoplay loop playsinline>
+            <source :src="getSrc('annika_chavez_directing_reel.mp4')" type="video/mp4">
+            Your browser does not support HTML5 video.
+          </video>
+        </div>
+      </div>
+      <div class="col-sm-12">
         <div class="film-titles">
           <div class="film-wrapper" data-id="bolognese">
             <router-link class="film-title"  to="/directing/bolognese">
@@ -62,7 +71,7 @@
         // )
       },
       getSrc: function (file) {
-        return require('@/assets/images/directing/gifs/'+file);
+        return require('@/assets/images/directing/'+file);
       }
     }
   }

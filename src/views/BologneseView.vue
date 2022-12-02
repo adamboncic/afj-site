@@ -1,8 +1,15 @@
 <template>
 <div class="directing-template bolognese">
+
   <preload-image :imgUrlArr="imgUrls" @imgAllLoaded="loadedState"></preload-image>
 
   <div v-if="preLoaded">
+    <!-- Back to Page -->
+    <div class="back-to-page">
+      <router-link class="back-button" to="/directing">
+        <i class="fa fa-arrow-left mr-1"></i>Back
+      </router-link>
+    </div>
      <!-- Content -->
     <div class="row">
       <div class="left-col col-sm-7">
