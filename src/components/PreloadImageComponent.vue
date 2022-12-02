@@ -51,7 +51,7 @@
 </style>
 
 <!-- —————————————↓HTML———————————————————————— -->
-<template>
+<!-- <template>
   <div class="vue-preload-image" v-if="show">
     <div class="spinner">
           <div class="circle one"></div>
@@ -59,7 +59,7 @@
           <div class="circle three"></div>
       </div>
   </div>
-</template>
+</template> -->
 
 <!-- ——————————————↓JS-———————————————————————— -->
 <script>
@@ -132,10 +132,12 @@ export default {
 
       if (this.loadedCount >= this.imgsSum) {
         var self = this
-        setTimeout(function() {
-          self.show = false;
+        self.show = false;
           self.$emit('imgAllLoaded')
-        }, 1000);
+        // setTimeout(function() {
+        //   self.show = false;
+        //   self.$emit('imgAllLoaded')
+        // }, 1000);
       } else if (this.order) {
         this.orderPreload()
       }
