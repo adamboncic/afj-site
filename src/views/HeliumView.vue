@@ -15,10 +15,13 @@
           <!-- Header -->
           <h5 class="film-header">Helium (2021)</h5>
 
-          <!-- Banner -->
-          <div class="film-banner">
-            <img class="img-fluid" :src="getSrc('banner.png')">
-          </div>
+        <!-- Trailer -->
+        <div class="film-trailer">
+          <video controls muted autoplay loop playsinline>
+            <source :src="getSrc('Helium_trailer.mp4')" type="video/mp4">
+            Your browser does not support HTML5 video.
+          </video>
+        </div>
 
           <!-- Details -->
           <div class="film-details">
@@ -82,3 +85,10 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+  video {
+    width: 100%;
+    height: auto;
+  }
+</style>
