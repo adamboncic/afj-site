@@ -13,3 +13,13 @@
     </div>
   </div>
 </template>
+<script>
+
+  export default {
+    name: 'AboutView',
+    created () {
+      const img = new Image();
+      img.src = require('@/assets/images/about/about.jpg');
+    },
+  }
+</script>
