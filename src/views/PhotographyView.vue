@@ -1,6 +1,8 @@
 <template>
   <div class="photography">
-    <div class="grid-wrapper">
+    <preload-image :imgUrlArr="imgUrls" @imgAllLoaded="loadedState"></preload-image>
+
+    <div class="grid-wrapper" v-if="preLoaded">
 
 
       <div>
@@ -152,22 +154,28 @@
 
   // import $ from "jquery";
   //import PhotoGallery from '@/components/PhotoGallery.vue';
+  import PreloadImage from '@/components/PreloadImageComponent.vue';
   import json from '@/static/data.json'
 
   export default {
     name: 'PhotographyView',
     components: {
-      //PhotoGallery
+      //PhotoGallery,
+      PreloadImage
     },
 
     data() {
       return {
-        imgsArr: [],
+        imgUrls: [],
         images: [],
-        data: json.photography
+        data: json.photography,
+        preLoaded: false
       };
     },
     methods: {
+      loadedState() {
+      this.preLoaded = true
+    },
       getImages: function() {
         const files = require.context(
           '@/assets/images/photography_2'
@@ -177,7 +185,7 @@
           // var orientation = (file.indexOf('ls') > -1) ? 'landscape' : 'portrait'
           var fileName = file.substr(2)
 
-          this.imgsArr.push(this.getSrc(fileName))
+          this.imgUrls.push(this.getSrc(fileName))
 
           this.images.push({
             src: this.getSrc(fileName)
@@ -202,7 +210,6 @@
     },
     created: function() {
       this.getImages()
-      console.log(this.imgsArr)
     }
   }
 </script>
