@@ -29,11 +29,6 @@
               </router-link>
             </li>
             <li class="nav-item">
-              <router-link class="nav-link main-link" to="/acting">
-                Acting
-              </router-link>
-            </li>
-            <li class="nav-item">
               <router-link class="nav-link main-link" to="/photography">
                 Photography
               </router-link>

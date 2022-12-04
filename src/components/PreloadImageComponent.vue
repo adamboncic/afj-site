@@ -51,7 +51,7 @@
 </style>
 
 <!-- —————————————↓HTML———————————————————————— -->
-<!-- <template>
+<template>
   <div class="vue-preload-image" v-if="show">
     <div class="spinner">
           <div class="circle one"></div>
@@ -59,7 +59,7 @@
           <div class="circle three"></div>
       </div>
   </div>
-</template> -->
+</template>
 
 <!-- ——————————————↓JS-———————————————————————— -->
 <script>
