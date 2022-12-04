@@ -138,12 +138,22 @@
         <img src="../assets/images/photography_2/AT_1.jpeg">
       </div>
 
+      <div>
+        <img src="../assets/images/photography_2/Trist_3.jpeg">
+      </div>
+
+
       <div class="wide">
         <img src="../assets/images/photography_2/Party_3.jpg">
       </div>
-      
-      
 
+      <div>
+        <img src="../assets/images/photography_2/Friend_9.jpeg">
+      </div>
+
+      <div>
+        <img src="../assets/images/photography_2/view_1.jpeg">
+      </div>
       
       <!-- <PhotoGallery id="photo-gallery" :images="images" /> -->
     </div>
