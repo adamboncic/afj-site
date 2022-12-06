@@ -131,13 +131,8 @@ export default {
 
 
       if (this.loadedCount >= (this.imgsSum / 2)) {
-        var self = this
-        self.show = false;
-        self.$emit('imgAllLoaded')
-        // setTimeout(function() {
-        //   self.show = false;
-        //   self.$emit('imgAllLoaded')
-        // }, 1000);
+        this.show = false;
+        this.$emit('imgAllLoaded')
       } else if (this.order) {
         this.orderPreload()
       }
