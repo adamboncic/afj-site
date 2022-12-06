@@ -130,7 +130,7 @@ export default {
       this.progressStr = this.progressType === 'percent' ? parseInt(this.loadedCount * 100 / this.imgsSum) + '%' : this.loadedCount + '/' + this.imgsSum
 
 
-      if (this.loadedCount >= this.imgsSum - 10) {
+      if (this.loadedCount >= (this.imgsSum / 2)) {
         var self = this
         self.show = false;
         self.$emit('imgAllLoaded')
