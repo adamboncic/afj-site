@@ -130,14 +130,14 @@ export default {
       this.progressStr = this.progressType === 'percent' ? parseInt(this.loadedCount * 100 / this.imgsSum) + '%' : this.loadedCount + '/' + this.imgsSum
 
 
-      if (this.loadedCount >= this.imgsSum) {
+      if (this.loadedCount >= this.imgsSum - 10) {
         var self = this
-        // self.show = false;
+        self.show = false;
+        self.$emit('imgAllLoaded')
+        // setTimeout(function() {
+        //   self.show = false;
         //   self.$emit('imgAllLoaded')
-        setTimeout(function() {
-          self.show = false;
-          self.$emit('imgAllLoaded')
-        }, 1000);
+        // }, 1000);
       } else if (this.order) {
         this.orderPreload()
       }
